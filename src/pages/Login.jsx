@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import "./Login.css";
+import "./Log.css"; // ✅ match filename exactly
 import api from '../api';
 
 const Login = () => {
@@ -9,24 +9,19 @@ const Login = () => {
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const res = await api.post("/auth/login", form);
-
-      // Save token and user info in localStorage
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data.user));
-
-      // Navigate to dashboard
       navigate('/dashboard');
     } catch (err) {
-      // Show backend message if exists
       alert(err.response?.data?.msg || "Login Failed");
     }
-  }
+  };
 
   return (
     <div className="login-container">
@@ -38,7 +33,7 @@ const Login = () => {
             type="email"
             placeholder="Email"
             onChange={handleChange}
-            value={form.email}       // bind value to state
+            value={form.email}
             required
           />
           <input
@@ -46,7 +41,7 @@ const Login = () => {
             type="password"
             placeholder="Password"
             onChange={handleChange}
-            value={form.password}    // bind value to state
+            value={form.password}
             required
           />
           <button type="submit">LOGIN</button>
@@ -57,6 +52,6 @@ const Login = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Login;

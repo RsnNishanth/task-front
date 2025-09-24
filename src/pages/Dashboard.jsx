@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../api.js";
-import "./Dashboard.css";
+import "./dash.css";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
