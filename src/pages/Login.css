@@ -1,0 +1,76 @@
+/* Container under navbar */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 1rem); /* subtract navbar height */
+  overflow: hidden; /* prevent unwanted scrollbars */
+  z-index: 20;
+  position: relative;
+}
+
+/* Card box */
+.paper {
+  background: #6454547a;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: azure;
+}
+
+/* Heading at top */
+.paper h1 {
+  margin: 0 0 1.5rem 0;
+  align-self: flex-start; /* stick to top-left */
+  text-align: center;
+  width: 100%;
+}
+
+/* Form layout */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Inputs */
+.form-container input {
+  padding: 10px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 90%;
+  font-size: 1rem;
+}
+
+/* Button */
+.form-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 60%;           /* narrower button */
+  align-self: center;   /* centered horizontally */
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Paragraph styling */
+.form-container p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  align-self: flex-start; /* stick to top-left */
+  text-align: center;
+  width: 100%;
+}

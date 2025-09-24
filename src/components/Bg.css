@@ -1,0 +1,48 @@
+.bgring {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 3rem); /* subtract navbar height */
+  position: absolute; /* background should be positioned */
+  top: 3rem; /* push below navbar */
+  left: 0;
+  right: 0;
+  z-index: 0; /* behind everything */
+  overflow: hidden;
+  background-color: black;
+}
+
+.ring{
+  border: 1rem solid transparent;
+  border-top: 1rem dashed rgb(60, 246, 32);
+  border-bottom: 1rem dashed red;
+  border-left: 1rem  blueviolet;
+  border-right: 1rem  turquoise;
+  z-index: 0;
+position: absolute;
+border-radius: 50%;
+opacity: 0.7;
+animation: rotate  10s linear infinite;
+box-shadow: 0 0 30px rgba(186, 251, 7, 0.584);
+}
+
+.ring:nth-child(1){
+height:350px;
+width: 350px;
+animation-duration: 20s;
+}
+.ring:nth-child(2){
+  height: 500px;
+  width: 500px;
+  animation-duration: 25s;
+}
+.ring:nth-child(3){
+  height: 650px;
+  width: 650px;
+  animation-duration: 30s;
+}
+
+@keyframes rotate{
+ 0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

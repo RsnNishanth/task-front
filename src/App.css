@@ -1,0 +1,18 @@
+.nav{
+    width: 100vw;
+    height: 5rem;
+    color: orange;
+    display: flex;
+    justify-content: center;
+    
+    background-color: black;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  overflow: hidden; /* prevent scrollbars unless really needed */
+}
