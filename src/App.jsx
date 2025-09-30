@@ -6,8 +6,9 @@ import Bg from './components/Bg'
 import ProtectedRoute from './components/ProtectedRoute'
 
 import Login from './pages/Login'       // ✅ correct case and path
-import Register from './pages/Register' // ✅ correct case and path
+// ✅ correct case and path
 import Dashboard from './pages/Dashboard'
+import Register from './pages/Register'
 
 function App() {
   return (
