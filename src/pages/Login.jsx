@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import "./Log.css"; // ✅ match filename exactly
+import "./log.css"; // ✅ match filename exactly
 import api from '../api';
 
 const Login = () => {
